@@ -31,7 +31,10 @@ while loop:
             elements_list.append(i)
             loop = False
 
-if len(elements_list) == 1:
+el_set = set(elements_list)
+el_list = list(el_set)
+
+if len(el_list) == 1:
     print(f'The closest number to the requested number "{requested_number}" is {elements_list[0]}')
 else:
     print(f'The closest numbers to the requested number "{requested_number}" are {elements_list[0]} and {elements_list[1]}')
