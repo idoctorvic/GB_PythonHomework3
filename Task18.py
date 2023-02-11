@@ -38,3 +38,21 @@ if len(el_list) == 1:
     print(f'The closest number to the requested number "{requested_number}" is {elements_list[0]}')
 else:
     print(f'The closest numbers to the requested number "{requested_number}" are {elements_list[0]} and {elements_list[1]}')
+
+input_set ={1, 2, 3, 5, 9, 12}
+num = 6
+dif = 0
+
+while True:
+    if num - dif in input_set and num + dif in input_set and num - dif != num + dif:
+        print(num - dif, num + dif)
+        break
+    elif num - dif in input_set:
+        print(num - dif)
+        break
+    elif num + dif in input_set:
+        print(num + dif)
+        break
+    else:
+        dif += 1
+
